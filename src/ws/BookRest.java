@@ -21,5 +21,15 @@ public class BookRest {
 		return bookmodel.findAllBooks();
 	}
 	
+	@GET
+	@Path("find")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Book find(@PathParam("id") Integer id){
+		BookModel bookmodel= new BookModel();
+		return bookmodel.findBook();
+	}
 	private void addRestResourceClasses(Set<Class>)
+}
+
+
 }
